@@ -37,7 +37,7 @@ const mailData={
   from:"yourdetail90@gmail.com",
   subject:"Reset you account by clicking on the link",
   to:a.email,
-  html:`<a href="http://localhost:5000/users/resetreq/${a.id}" target="_blank">click to reset<a>`
+  html:`<a href="https://passwordresetflowmethod.herokuapp.com/users/resetreq/${a.id}" target="_blank">click to reset<a>`
 }
 
 
@@ -190,7 +190,7 @@ router.get("/resetreq/:randstr",async (req,res)=>{
     if (user) {
 
       
-      res.redirect("http://localhost:3000/resetpassword")
+      res.redirect("https://loginflow.netlify.app/resetpassword")
 
       await mongoose.disconnect()
 
